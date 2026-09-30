@@ -15,7 +15,7 @@ from six import iteritems
 def execute(filters=None):
 	if not filters: filters = {}
 
-	validate_filters(filters)
+	# validate_filters(filters)
 
 	from_date = filters.get('from_date')
 	to_date = filters.get('to_date')
