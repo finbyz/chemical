@@ -844,7 +844,7 @@ def update_po(self):
 					item.idx for item in self.items if item.t_warehouse
 				]
 				for row in self.items:
-					if row.t_warehouse:
+					if row.t_warehouse and row.is_finished_item:
 						count += 1
 						batch_yield += row.batch_yield
 						concentration += row.concentration
@@ -936,7 +936,7 @@ def update_po(self):
 					item.idx for item in self.items if item.t_warehouse
 				]
 				for row in self.items:
-					if row.t_warehouse:
+					if row.t_warehouse and row.is_finished_item:
 						count += 1
 						batch_yield += row.batch_yield
 						concentration += row.concentration
